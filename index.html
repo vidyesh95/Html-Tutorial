@@ -1,30 +1,720 @@
 <!DOCTYPE html>
+<!-- 
+  ==============================================================================
+  COMPLETE LEARNING GUIDE & SHOWCASE: SEO, SEMANTIC HTML5 & MODERN CSS
+  ==============================================================================
+  This document is structured to serve as both a high-performance modern web page
+  and a comprehensive educational reference. Every section contains detailed
+  annotations explaining WHY specific tags, attributes, and styles are applied.
+  ==============================================================================
+-->
+
+<!-- 
+  1. DOCTYPE & HTML ROOT:
+  - `<!DOCTYPE html>`: Declares HTML5 mode, triggering the browser's standard rendering engine.
+  - `<html lang="en">`: Essential for SEO and Accessibility. Declares the primary language
+    to search engines and text-to-speech screen readers.
+-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html Tutorial</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/style.css">
+  <!-- 
+    2. CHARACTER ENCODING & VIEWPORT:
+    - `meta charset="UTF-8"`: Covers almost all characters, symbols, and emojis.
+    - `meta name="viewport"`: Critical for responsive mobile layout. Tells mobile browsers
+      to set the width of the screen to device width without auto-zooming out.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    3. SEARCH ENGINE OPTIMIZATION (SEO) PRIMARY TAGS:
+    - `<title>`: Most vital on-page SEO signal. Keep between 50-60 characters.
+    - `description`: 150-160 characters summary shown on Google SERP (Search Engine Results Page).
+    - `keywords`: Historical reference, still useful for categorical indexing.
+    - `robots`: Directs search engine web crawlers (Googlebot, Bingbot) on how to index and snippet.
+    - `canonical`: Prevents duplicate content penalties by specifying the primary source URL.
+  -->
+  <title>Mastering Modern Web Architecture: SEO, Semantic HTML5 &amp; Modern CSS</title>
+  <meta name="description" content="A complete guide and production portfolio demonstrating mastery of Technical SEO, Semantic HTML5 standards, and Modern CSS layout architecture.">
+  <meta name="keywords" content="SEO, Technical SEO, Semantic HTML5, Modern CSS, CSS Grid, Flexbox, Web Accessibility, WCAG, Structured Data, Schema.org">
+  <meta name="author" content="Modern Web Standards &amp; Architecture Showcase">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="http://localhost:8000/">
+
+  <!-- 
+    4. OPEN GRAPH PROTOCOL (Facebook, LinkedIn, Discord, Slack, iMessage):
+    Enables rich link preview cards when the URL is shared on social platforms.
+  -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mastering Modern Web Architecture: SEO, Semantic HTML5 &amp; Modern CSS">
+  <meta property="og:description" content="Deep-dive educational showcase demonstrating technical SEO, semantic HTML5 tags, and modern CSS features.">
+  <meta property="og:url" content="http://localhost:8000/">
+  <meta property="og:site_name" content="Web Standards Masterclass">
+  <meta property="og:image" content="http://localhost:8000/public/images/logo.svg">
+
+  <!-- 
+    5. TWITTER CARD METADATA:
+    Controls rich previews specifically on Twitter / X.
+  -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mastering Modern Web Architecture: SEO, Semantic HTML5 &amp; Modern CSS">
+  <meta name="twitter:description" content="Deep-dive educational showcase demonstrating technical SEO, semantic HTML5 tags, and modern CSS features.">
+  <meta name="twitter:image" content="http://localhost:8000/public/images/logo.svg">
+
+  <!-- 
+    6. STRUCTURED DATA / SCHEMA.ORG (JSON-LD):
+    JSON-LD (JavaScript Object Notation for Linked Data) helps Google understand
+    entities, roles, and content structure, qualifying the site for rich search results.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "http://localhost:8000/#website",
+        "url": "http://localhost:8000/",
+        "name": "Web Standards Masterclass",
+        "description": "Showcase of Modern SEO, Semantic HTML, and Modern CSS Architecture",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "http://localhost:8000/#webpage",
+        "url": "http://localhost:8000/",
+        "name": "Mastering Modern Web Architecture",
+        "isPartOf": { "@id": "http://localhost:8000/#website" },
+        "about": {
+          "@type": "Person",
+          "name": "Web Architect & Standards Specialist",
+          "jobTitle": "Frontend Architect & Technical SEO Engineer",
+          "knowsAbout": [
+            "Search Engine Optimization (SEO)",
+            "Semantic HTML5",
+            "Modern CSS & CSS Grid",
+            "Web Performance & Core Web Vitals",
+            "Web Accessibility (WCAG 2.2)"
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- 
+    7. RESOURCE HINTS & STYLESHEET LOADING:
+    - `preconnect`: Warms up DNS lookup and TLS handshake for external font servers.
+    - `link rel="stylesheet"`: Primary CSS file containing design tokens and components.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/style.css">
 </head>
+
 <body>
-    <div class="hero_section"> <!-- relative  -->
-        <img class="hero_section-image" src="public/images/category_hero_image.webp" alt="Jewelry Image">
-        <div class="hero_text_div"> <!-- absolute width top: 50px left: 30px  -->
-            <p class="beautiful_selection">BEAUTIFUL SELECTION</p>
-            <p class="exquisitely_c_j_c">Exquisitely Crafted Jewelry Collection</p>
-            <div class="hero_text_sub_div">
-                <p class="s_o_w_s_o_h">Shop our wide selection of high-quality jewelry and find the perfect piece to elevate your style</p>
-                <a href="https://www.youtube.com/" target="_blank" rel="noreferrer noopener">
-                    <button type="button" class="shop_button">
-                        <img src="public/images/local_mall.svg" alt="localmall">
-                        Shop
-                    </button>
-                </a>
-            </div>
-        </div>
+  <!-- 
+    8. ACCESSIBILITY: SKIP LINK
+    Allows keyboard and screen-reader users to bypass repetitive navigation
+    and jump straight into the main page content.
+  -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- 
+    9. SEMANTIC HEADER & NAVIGATION:
+    - `<header>`: Represents introductory content or navigation links for the document.
+    - `<nav>`: Designates a major navigational landmark with an accessible `aria-label`.
+  -->
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <a href="/" class="brand" aria-label="Web Standards Masterclass Homepage">
+        <!-- Semantic Inline SVG Logo -->
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span>WebStandards<span style="color: var(--color-accent-primary);">.dev</span></span>
+        <span class="brand-badge">HTML5 + CSS3</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#seo" class="nav-link">1. SEO Blueprint</a></li>
+          <li><a href="#html-semantics" class="nav-link">2. HTML5 Semantics</a></li>
+          <li><a href="#modern-css" class="nav-link">3. Modern CSS</a></li>
+          <li><a href="#interactive-demo" class="nav-link">4. Code Lab</a></li>
+          <li><a href="#contact" class="nav-link">5. Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <!-- 
+    10. MAIN LANDMARK:
+    The `<main>` element contains the unique primary content of the body.
+    There should only ever be one visible `<main>` element per document.
+  -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section container" aria-labelledby="hero-title">
+      <span class="hero-eyebrow">
+        <span>⚡</span> Production Architecture &amp; Learning Guide
+      </span>
+
+      <!-- Primary H1: Highest level heading for SEO search indexing -->
+      <h1 id="hero-title" class="hero-title">
+        I Understand <span class="gradient-text">SEO, Semantic HTML5</span> &amp; Modern CSS.
+      </h1>
+
+      <p class="hero-lead">
+        A deep architectural showcase proving that clean semantic markup, rigorous technical SEO metadata, 
+        and modern native CSS features build faster, more accessible, and search-dominant web experiences.
+      </p>
+
+      <!-- Semantic List of Core Competencies -->
+      <ul class="badge-list" aria-label="Key Competencies">
+        <li>100% Native Semantic Tags</li>
+        <li>Schema.org JSON-LD Structured Data</li>
+        <li>Core Web Vitals &amp; Performance Ready</li>
+        <li>CSS Grid &amp; Modern Flexbox</li>
+        <li>Native CSS Nesting (&amp;)</li>
+        <li>WCAG AA Accessibility Compliant</li>
+        <li>Zero JS Dependency Requirement</li>
+      </ul>
+
+      <div class="hero-actions">
+        <a href="#seo" class="button button-primary">
+          Explore SEO Blueprint ↓
+        </a>
+        <a href="#html-semantics" class="button button-secondary">
+          Inspect HTML Semantics →
+        </a>
+      </div>
+    </section>
+
+    <!-- CALLOUT TIP: EDUCATIONAL FOUNDATION -->
+    <div class="container container-narrow">
+      <aside class="callout-box" aria-label="Educational Architecture Note">
+        <div class="callout-title">
+          <span>💡</span> Why Semantic HTML &amp; Technical SEO Form The Foundation
+        </div>
+        <p>
+          Before a single byte of JavaScript executes, search engine crawlers and assistive screen readers 
+          rely entirely on your document's semantic structure and HTTP response. Clean markup translates directly 
+          into higher search rankings, lower bounce rates, and seamless accessibility for every user.
+        </p>
+      </aside>
+    </div>
+
+    <!-- ==================================================================== -->
+    <!-- PILLAR 1: TECHNICAL & CONTENT SEARCH ENGINE OPTIMIZATION (SEO)       -->
+    <!-- ==================================================================== -->
+    <section id="seo" class="container" aria-labelledby="seo-heading">
+      <header class="section-header">
+        <span class="section-tag">Pillar 1: Technical &amp; On-Page SEO</span>
+        <h2 id="seo-heading" class="section-title">Dominating Search Engine Indexing &amp; Ranking</h2>
+        <p class="section-desc">
+          Modern SEO is not keyword stuffing—it is technical hygiene, semantic clarity, 
+          structured entity mapping, and high-speed delivery.
+        </p>
+      </header>
+
+      <div class="grid-cards">
+        <!-- Article 1: Metadata & Crawlability -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+          </div>
+          <h3 class="card-title">1. Metadata &amp; Crawlability</h3>
+          <p class="card-summary">
+            Directing web crawlers via precise <code>&lt;meta name="robots"&gt;</code>, canonical links 
+            to prevent duplicate content penalties, and optimized <code>&lt;title&gt;</code> / description tags.
+          </p>
+          <ul class="tag-list">
+            <li>Canonical URL</li>
+            <li>Robots Directives</li>
+            <li>SERP Optimization</li>
+          </ul>
+        </article>
+
+        <!-- Article 2: Structured Data (Schema.org) -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+          </div>
+          <h3 class="card-title">2. JSON-LD Structured Data</h3>
+          <p class="card-summary">
+            Embedding Linked Data schemas (<code>WebSite</code>, <code>ProfilePage</code>, <code>BreadcrumbList</code>) 
+            enabling Google Knowledge Graph comprehension and rich SERP snippets with zero visual overhead.
+          </p>
+          <ul class="tag-list">
+            <li>Schema.org</li>
+            <li>JSON-LD Graph</li>
+            <li>Rich Snippets</li>
+          </ul>
+        </article>
+
+        <!-- Article 3: Core Web Vitals & Speed -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.01-4.09l-2.49-1.46C16.14 17.84 14.21 19 12 19z"></path></svg>
+          </div>
+          <h3 class="card-title">3. Core Web Vitals</h3>
+          <p class="card-summary">
+            Google ranks fast pages. By maintaining <strong>Largest Contentful Paint (LCP) &lt; 2.5s</strong>, 
+            <strong>Cumulative Layout Shift (CLS) = 0</strong>, and minimal DOM depth, organic performance is maximized.
+          </p>
+          <ul class="tag-list">
+            <li>LCP Optimization</li>
+            <li>CLS Prevention</li>
+            <li>Font Preconnect</li>
+          </ul>
+        </article>
+
+        <!-- Article 4: Semantic Document Outline -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"></path></svg>
+          </div>
+          <h3 class="card-title">4. Heading Architecture</h3>
+          <p class="card-summary">
+            Strict heading hierarchy: Exactly one <code>&lt;h1&gt;</code> per document, followed by structured 
+            <code>&lt;h2&gt;</code> and <code>&lt;h3&gt;</code> levels. Screen readers and search indexers navigate this outline.
+          </p>
+          <ul class="tag-list">
+            <li>Single H1 Rule</li>
+            <li>H2-H6 Nesting</li>
+            <li>Outline Algorithm</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- PILLAR 2: SEMANTIC HTML5 ARCHITECTURE                                -->
+    <!-- ==================================================================== -->
+    <section id="html-semantics" class="container" aria-labelledby="html-heading">
+      <header class="section-header">
+        <span class="section-tag">Pillar 2: Semantic HTML5 Mastery</span>
+        <h2 id="html-heading" class="section-title">Replacing "Div Soup" with Meaningful Elements</h2>
+        <p class="section-desc">
+          HTML is not just visual layout—it is meaning. A semantic tag tells browsers, search crawlers, 
+          and screen readers what the content represents.
+        </p>
+      </header>
+
+      <!-- SEMANTIC COMPARISON TABLE -->
+      <div class="table-wrapper">
+        <table class="semantic-table">
+          <caption class="sr-only">Comparison of Legacy Non-Semantic Markup versus Modern Semantic HTML5</caption>
+          <thead>
+            <tr>
+              <th scope="col">Use Case / Role</th>
+              <th scope="col">Legacy Anti-Pattern (Non-Semantic)</th>
+              <th scope="col">Modern Semantic HTML5 Standard</th>
+              <th scope="col">Accessibility &amp; SEO Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Primary Page Navigation</strong></td>
+              <td class="bad-code">&lt;div class="nav-bar"&gt;</td>
+              <td class="good-code">&lt;nav aria-label="Primary"&gt;</td>
+              <td>Creates a native landmark screen readers can jump directly to.</td>
+            </tr>
+            <tr>
+              <td><strong>Self-Contained Content</strong></td>
+              <td class="bad-code">&lt;div class="card"&gt;</td>
+              <td class="good-code">&lt;article&gt;</td>
+              <td>Signals syndicated, reusable content suitable for feed distribution.</td>
+            </tr>
+            <tr>
+              <td><strong>Document Sectioning</strong></td>
+              <td class="bad-code">&lt;div class="section-wrapper"&gt;</td>
+              <td class="good-code">&lt;section aria-labelledby="..."&gt;</td>
+              <td>Groups thematic content with an explicit semantic heading binding.</td>
+            </tr>
+            <tr>
+              <td><strong>Illustrations &amp; Media</strong></td>
+              <td class="bad-code">&lt;div class="img-box"&gt;&lt;img&gt;&lt;p&gt;</td>
+              <td class="good-code">&lt;figure&gt;&lt;img&gt;&lt;figcaption&gt;</td>
+              <td>Associates explanatory captions directly with media entities.</td>
+            </tr>
+            <tr>
+              <td><strong>Machine-Readable Dates</strong></td>
+              <td class="bad-code">&lt;span class="date"&gt;Nov 19, 2026&lt;/span&gt;</td>
+              <td class="good-code">&lt;time datetime="2026-11-19"&gt;</td>
+              <td>Allows search engines and calendar parsers to index accurate timestamps.</td>
+            </tr>
+            <tr>
+              <td><strong>Interactive Disclosure</strong></td>
+              <td class="bad-code">&lt;div class="accordion" onclick="..."&gt;</td>
+              <td class="good-code">&lt;details&gt; &amp; &lt;summary&gt;</td>
+              <td>Zero JavaScript required. Keyboard accessible (Space/Enter) out of the box.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FIGURE & FIGCAPTION SEMANTIC DEMONSTRATION -->
+      <figure style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); margin-bottom: var(--space-12);">
+        <blockquote cite="https://www.w3.org/WAI/fundamentals/accessibility-intro/" style="font-size: var(--font-size-base); color: var(--color-text-primary); border-left: 3px solid var(--color-accent-tertiary); padding-left: var(--space-4); margin-bottom: var(--space-3); font-style: italic;">
+          "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect. When HTML is written semantically, accessibility is baked into the browser for free."
+        </blockquote>
+        <figcaption style="font-size: var(--font-size-xs); color: var(--color-text-muted); font-family: var(--font-mono);">
+          — <cite>Tim Berners-Lee</cite>, W3C Director &amp; Inventor of the World Wide Web
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- PILLAR 3: MODERN CSS ARCHITECTURE & STANDARDS                        -->
+    <!-- ==================================================================== -->
+    <section id="modern-css" class="container" aria-labelledby="css-heading">
+      <header class="section-header">
+        <span class="section-tag">Pillar 3: Modern CSS Standards</span>
+        <h2 id="css-heading" class="section-title">CSS3+ Specs That Eliminate Preprocessors</h2>
+        <p class="section-desc">
+          Modern CSS has evolved past floats and Sass workarounds. Today, native CSS provides 
+          design tokens, nesting, grid systems, fluid typography, and container-level responsiveness.
+        </p>
+      </header>
+
+      <div class="grid-cards">
+        <!-- Feature 1: CSS Custom Properties -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
+          </div>
+          <h3 class="card-title">1. Custom Properties (:root)</h3>
+          <p class="card-summary">
+            CSS variables cascade through the DOM at runtime. Allows dark mode, high-contrast themes, 
+            and dynamic brand updates without recompiling stylesheets.
+          </p>
+          <ul class="tag-list">
+            <li>var(--token-name)</li>
+            <li>Runtime Theming</li>
+            <li>Cascade Inheritance</li>
+          </ul>
+        </article>
+
+        <!-- Feature 2: CSS Grid & Flexbox -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 3v18h18V3H3zm8 16H5v-6h6v6zm0-8H5V5h6v6zm8 8h-6v-6h6v6zm0-8h-6V5h6v6z"></path></svg>
+          </div>
+          <h3 class="card-title">2. Grid &amp; Modern Flexbox</h3>
+          <p class="card-summary">
+            Using <code>repeat(auto-fit, minmax(320px, 1fr))</code> for intrinsic 2D grids, and Flexbox with 
+            modern <code>gap</code> properties for 1D alignments without margin hacks.
+          </p>
+          <ul class="tag-list">
+            <li>auto-fit &amp; minmax()</li>
+            <li>gap property</li>
+            <li>Subgrid Support</li>
+          </ul>
+        </article>
+
+        <!-- Feature 3: Native CSS Nesting -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg>
+          </div>
+          <h3 class="card-title">3. Native CSS Nesting</h3>
+          <p class="card-summary">
+            Modern browsers natively support nesting selectors with <code>&amp;</code>. 
+            No build step or Sass preprocessor required to write modular, scoped CSS.
+          </p>
+          <ul class="tag-list">
+            <li>Native &amp; Syntax</li>
+            <li>Scoped Hierarchy</li>
+            <li>Zero Build Tools</li>
+          </ul>
+        </article>
+
+        <!-- Feature 4: Fluid Typography (clamp) -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"></path></svg>
+          </div>
+          <h3 class="card-title">4. Fluid Typography</h3>
+          <p class="card-summary">
+            <code>clamp(min, preferred, max)</code> smoothly interpolates font sizes between viewport widths, 
+            replacing dozens of rigid <code>@media</code> breakpoints.
+          </p>
+          <ul class="tag-list">
+            <li>clamp() Formula</li>
+            <li>Viewport Units (vw)</li>
+            <li>Harmonic Scale</li>
+          </ul>
+        </article>
+
+        <!-- Feature 5: Modern Selectors -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+          </div>
+          <h3 class="card-title">5. :has(), :is(), :focus-visible</h3>
+          <p class="card-summary">
+            The parent selector <code>:has()</code> brings conditional styling based on descendants. 
+            <code>:is()</code> simplifies compound selectors, and <code>:focus-visible</code> guarantees keyboard a11y.
+          </p>
+          <ul class="tag-list">
+            <li>Parent Selector :has()</li>
+            <li>Specificity Forgiving :is()</li>
+            <li>:focus-visible</li>
+          </ul>
+        </article>
+
+        <!-- Feature 6: Modern Color & Light/Dark Scheme -->
+        <article class="feature-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path></svg>
+          </div>
+          <h3 class="card-title">6. Color System &amp; Schemes</h3>
+          <p class="card-summary">
+            Using <code>color-scheme: dark light</code> to inform user agent defaults, accompanied by 
+            accessible contrast ratios that pass WCAG 2.2 AA and AAA thresholds.
+          </p>
+          <ul class="tag-list">
+            <li>color-scheme</li>
+            <li>WCAG AAA Contrast</li>
+            <li>prefers-color-scheme</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- PILLAR 4: INTERACTIVE CODE LAB (<details> / <summary>)               -->
+    <!-- ==================================================================== -->
+    <section id="interactive-demo" class="container container-narrow" aria-labelledby="lab-heading">
+      <header class="section-header">
+        <span class="section-tag">Pillar 4: Interactive Architecture Lab</span>
+        <h2 id="lab-heading" class="section-title">Deep-Dive Code Blueprints</h2>
+        <p class="section-desc">
+          Click any accordion item below to inspect complete code snippets demonstrating how each standard works. 
+          <em>(Notice: Built with native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>—zero JS!)</em>
+        </p>
+      </header>
+
+      <div class="interactive-accordion">
+        <!-- Details 1: Technical SEO Blueprint -->
+        <details>
+          <summary>SEO Blueprint: Ideal Head Structure &amp; JSON-LD Schema</summary>
+          <div class="accordion-content">
+            <p>
+              This exact template ensures your site scores 100/100 on SEO audits (Lighthouse, Google Search Console):
+            </p>
+            <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Primary Keyword - Secondary Keyword | Brand Name&lt;/title&gt;
+  &lt;meta name="description" content="Concise, action-driven description under 160 characters."&gt;
+  &lt;link rel="canonical" href="https://example.com/page-slug"&gt;
+  &lt;meta name="robots" content="index, follow"&gt;
+
+  &lt;!-- Open Graph / Social --&gt;
+  &lt;meta property="og:title" content="Page Title"&gt;
+  &lt;meta property="og:description" content="Social preview snippet"&gt;
+  &lt;meta property="og:image" content="https://example.com/og-image.jpg"&gt;
+
+  &lt;!-- Schema.org JSON-LD --&gt;
+  &lt;script type="application/ld+json"&gt;
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Brand Name",
+    "url": "https://example.com/"
+  }
+  &lt;/script&gt;
+&lt;/head&gt;</code></pre>
+          </div>
+        </details>
+
+        <!-- Details 2: Semantic HTML5 Document Outline -->
+        <details>
+          <summary>HTML5 Architecture: Complete Landmark Hierarchy</summary>
+          <div class="accordion-content">
+            <p>
+              Every accessible web page should follow this predictable landmark structure:
+            </p>
+            <pre><code>&lt;body&gt;
+  &lt;!-- 1. Skip Link for keyboard navigation --&gt;
+  &lt;a href="#main" class="skip-link"&gt;Skip to content&lt;/a&gt;
+
+  &lt;!-- 2. Header &amp; Main Navigation --&gt;
+  &lt;header&gt;
+    &lt;nav aria-label="Main"&gt;...&lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;!-- 3. Main Unique Content --&gt;
+  &lt;main id="main"&gt;
+    &lt;section aria-labelledby="section-1"&gt;
+      &lt;h1 id="section-1"&gt;Single Primary Heading&lt;/h1&gt;
+      &lt;article&gt;
+        &lt;h2&gt;Self-Contained Content Entity&lt;/h2&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;!-- 4. Global Footer --&gt;
+  &lt;footer&gt;
+    &lt;address&gt;Contact Information&lt;/address&gt;
+    &lt;time datetime="2026"&gt;2026&lt;/time&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+          </div>
+        </details>
+
+        <!-- Details 3: Modern CSS Layout: Grid auto-fit & clamp -->
+        <details>
+          <summary>Modern CSS: 3-Line Responsive Grid &amp; Fluid Typography</summary>
+          <div class="accordion-content">
+            <p>
+              Forget writing ten media query blocks. Modern CSS achieves intrinsic responsiveness with two rules:
+            </p>
+            <pre><code>/* 1. Fluid Typography without breakpoints */
+h1 {
+  /* clamp(min-size, preferred-size, max-size) */
+  font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+}
+
+/* 2. Responsive Grid with zero media queries */
+.grid-container {
+  display: grid;
+  /* Automatically wraps columns when width drops below 320px */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1.5rem;
+}
+
+/* 3. Native CSS Nesting */
+.card {
+  background: var(--color-surface);
+
+  &amp;:hover {
+    transform: translateY(-4px);
+  }
+
+  &amp; .card-title {
+    color: var(--color-accent-primary);
+  }
+}</code></pre>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- PILLAR 5: ACCESSIBLE SEMANTIC FORM & CONTACT                         -->
+    <!-- ==================================================================== -->
+    <section id="contact" class="container container-narrow" aria-labelledby="contact-heading">
+      <header class="section-header">
+        <span class="section-tag">Pillar 5: Semantic Forms &amp; Access</span>
+        <h2 id="contact-heading" class="section-title">Accessible Form Engineering</h2>
+        <p class="section-desc">
+          Form accessibility (A11y) is critical: every input must possess an associated <code>&lt;label for="..."&gt;</code>, 
+          grouped logically inside a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code>.
+        </p>
+      </header>
+
+      <!-- SEMANTIC FORM -->
+      <form class="semantic-form" action="#" method="get" onsubmit="event.preventDefault(); alert('Form submitted successfully! Validated via native HTML5 constraints.');">
+        <fieldset>
+          <legend>Web Standards Contact &amp; Inquiry</legend>
+
+          <div class="form-group">
+            <label for="user-name">Your Full Name <span aria-hidden="true" style="color: var(--color-accent-highlight);">*</span></label>
+            <input type="text" id="user-name" name="name" required placeholder="e.g. Ada Lovelace" autocomplete="name">
+            <span class="helper-text">Required. Autofill-enabled via autocomplete="name".</span>
+          </div>
+
+          <div class="form-group">
+            <label for="user-email">Email Address <span aria-hidden="true" style="color: var(--color-accent-highlight);">*</span></label>
+            <input type="email" id="user-email" name="email" required placeholder="name@domain.com" autocomplete="email">
+            <span class="helper-text">Validated natively with type="email".</span>
+          </div>
+
+          <div class="form-group">
+            <label for="subject-area">Primary Topic of Discussion</label>
+            <select id="subject-area" name="topic">
+              <option value="seo">Technical &amp; Structured Data SEO</option>
+              <option value="html">Semantic HTML5 Architecture &amp; WCAG A11y</option>
+              <option value="css">Modern CSS Layouts (Grid, Flexbox, Nesting)</option>
+              <option value="consulting">Full Web Architecture Review</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="user-message">Your Message</label>
+            <textarea id="user-message" name="message" rows="4" placeholder="Share your inquiry or project requirements..."></textarea>
+          </div>
+
+          <div style="margin-top: var(--space-6);">
+            <button type="submit" class="button button-primary">
+              Submit Semantic Form →
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ==================================================================== -->
+  <!-- SITE FOOTER                                                          -->
+  <!-- ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Summary -->
+        <div>
+          <div class="brand" style="margin-bottom: var(--space-4);">
+            <svg class="brand-icon" style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span style="font-weight: 700; color: var(--color-text-primary);">WebStandards.dev</span>
+          </div>
+          <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm); margin-bottom: var(--space-4);">
+            Dedicated to modern web engineering: Search Engine Optimization, Semantic HTML5, and Cutting-Edge CSS.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Landmarks -->
+        <div>
+          <h4 class="footer-col-title">Navigation Landmarks</h4>
+          <ul class="footer-links">
+            <li><a href="#seo">Technical SEO Standards</a></li>
+            <li><a href="#html-semantics">Semantic HTML5 Elements</a></li>
+            <li><a href="#modern-css">Modern CSS Architecture</a></li>
+            <li><a href="#interactive-demo">Interactive Code Lab</a></li>
+            <li><a href="#contact">Accessible Form Demo</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Semantic Address & Author -->
+        <div>
+          <h4 class="footer-col-title">Author &amp; Attribution</h4>
+          <address>
+            <p><strong>Frontend &amp; SEO Architect</strong></p>
+            <p>Specializing in HTML5, CSS3+, and Web Core Standards</p>
+            <p style="margin-top: var(--space-2);">Email: <a href="mailto:architect@webstandards.dev">architect@webstandards.dev</a></p>
+          </address>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>
+          &copy; <time datetime="2026">2026</time> WebStandards.dev. Built with 100% semantic HTML5 and modern CSS.
+        </p>
+        <p>
+          <a href="#main-content" style="color: var(--color-accent-primary);">↑ Back to top</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
