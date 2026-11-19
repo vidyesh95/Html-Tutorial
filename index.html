@@ -4,11 +4,11 @@
   LIQUID GLASS ARCHITECTURE SHOWCASE & LEARNING GUIDE
   SEO, SEMANTIC HTML5 & MODERN CSS3+
   ==============================================================================
-  Precision double-capsule glass optics replicating Image 1:
+  Physical 3D liquid glass optics replicating Image 1 (Smoked/Neon) & Image 2 (Crystal Light):
   - 100% Valid Semantic HTML5 (header, nav, main, section, article, figure, footer)
   - Full Technical SEO suite (JSON-LD Schema, Open Graph, Twitter cards, Meta tags)
-  - Photorealistic physical glass: double-capsule frames, chromatic caustics,
-    tactile 3D switches, and studio specular reflections.
+  - Molded 3D acrylic glass: extruded bevels, chromatic caustics,
+    tactile 3D switches, and overhead studio specular reflections.
   ==============================================================================
 -->
 <html lang="en">
@@ -83,7 +83,7 @@
   <link rel="stylesheet" href="public/css/style.css">
 </head>
 
-<body>
+<body data-theme="light">
   <!-- Skip Link for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -93,8 +93,8 @@
   <header class="site-header">
     <div class="header-glass-bar">
       <a href="/" class="brand" aria-label="Liquid Glass Web Standards Homepage">
-        <span style="font-size: 20px;">💎</span>
-        <span>liquid <span style="color: #0284c7;">glass</span></span>
+        <span class="brand-gem" aria-hidden="true">💎</span>
+        <span>liquid <span class="brand-accent">glass</span></span>
       </a>
 
       <nav class="site-nav" aria-label="Primary Navigation">
@@ -116,10 +116,10 @@
   <!-- ==================================================================== -->
   <main id="main-content">
 
-    <!-- HERO SECTION & HERO BOARD (DIRECT REPLICA OF IMAGE 1) -->
+    <!-- HERO SECTION & HERO BOARD -->
     <section class="hero-section container" aria-labelledby="hero-title">
       <span class="hero-eyebrow">
-        <span>⚡</span> Liquid Glass Architecture • VisionOS Acrylic Optics
+        <span aria-hidden="true">⚡</span> Liquid Glass Architecture • 3D Acrylic Optics
       </span>
 
       <h1 id="hero-title" class="hero-title">
@@ -127,205 +127,252 @@
       </h1>
 
       <p class="hero-lead">
-        A production-grade web experience engineered with hyper-realistic liquid glass refraction, 
-        prismatic caustics, strict semantic HTML5 tags, and deep technical SEO optimization.
+        A production-grade web experience engineered with molded 3D liquid glass refraction,
+        prismatic floor caustics, strict semantic HTML5 tags, and deep technical SEO optimization.
       </p>
 
       <!-- LIQUID GLASS MODE SWITCHER CONTROLLER -->
       <div class="mode-switcher-container" role="radiogroup" aria-label="Liquid Glass Theme Variation">
-        <button type="button" id="btn-mode-light" class="mode-switch-btn active" onclick="setBoardMode('light')">
-          <span>☀️</span> Light Mode (Image 2)
+        <button type="button" id="btn-mode-light" class="mode-switch-btn active" role="radio" aria-checked="true" onclick="setBoardMode('light')">
+          <span aria-hidden="true">☀️</span> Crystal Light (Image 2)
         </button>
-        <button type="button" id="btn-mode-dark" class="mode-switch-btn" onclick="setBoardMode('dark')">
-          <span>🌙</span> Dark Mode (Image 1)
+        <button type="button" id="btn-mode-dark" class="mode-switch-btn" role="radio" aria-checked="false" onclick="setBoardMode('dark')">
+          <span aria-hidden="true">🌙</span> Smoked Neon (Image 1)
         </button>
       </div>
 
       <!-- ================================================================ -->
-      <!-- LIQUID GLASS HERO BOARD (SUPPORTS BOTH MODES)                    -->
+      <!-- LIQUID GLASS HERO BOARD (MATTE STUDIO STAGE)                     -->
       <!-- ================================================================ -->
       <div id="hero-board" class="hero-glass-board" aria-label="Liquid Glass Component Master Board">
-        <!-- Board Header (Top labels) -->
+        <!-- Board Header -->
         <div class="board-header">
           <span class="board-label">liquid glass</span>
           <span class="board-tag">Hero Board</span>
         </div>
 
         <!-- ============================================================== -->
-        <!-- LIGHT MODE VIEW (EXACT MATCH FOR IMAGE 2)                      -->
+        <!-- CRYSTAL LIGHT VIEW (EXACT MATCH FOR IMAGE 2)                   -->
         <!-- ============================================================== -->
         <div id="light-view" class="light-mode-view">
           <!-- ROW 1: Create workspace | Search projects... | Profile Squircle -->
           <div class="board-row-1-light">
-            <div class="glass-capsule capsule-coral" role="button" tabindex="0">
-              <span class="inner-coral-pill">Create workspace</span>
-            </div>
+            <button type="button" class="molded-lozenge lozenge-coral">
+              <span>Create<br>workspace</span>
+            </button>
 
-            <div class="glass-capsule capsule-blue" role="button" tabindex="0">
-              <span class="inner-blue-pill">Search projects...</span>
-            </div>
+            <button type="button" class="molded-lozenge lozenge-blue">
+              <span>Search<br>projects...</span>
+            </button>
 
-            <div class="glass-squircle-icon" title="User Profile &amp; Search">
-              <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="4.5"></circle>
-                <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+            <button type="button" class="crystal-squircle-profile" aria-label="User Profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="8.5" r="4"></circle>
+                <path d="M4.5 20c1.4-3.8 4.4-5.5 7.5-5.5s6.1 1.7 7.5 5.5"></path>
               </svg>
-            </div>
+            </button>
           </div>
 
-          <!-- ROW 2: Large Search Projects Capsule + "Text" Squircle -->
+          <!-- ROW 2: Wide Crystal Search Bar + "Text" Squircle -->
           <div class="board-row-2-light">
-            <div class="glass-search-outer" role="search">
-              <div class="search-inner-tray">
-                <svg class="search-icon" viewBox="0 0 24 24">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <div class="crystal-search-shell" role="search">
+              <div class="crystal-search-well">
+                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                  <line x1="15.5" y1="15.5" x2="21" y2="21"></line>
                 </svg>
                 <input type="text" placeholder="Search projects..." aria-label="Search projects">
               </div>
             </div>
 
-            <div class="glass-text-squircle">
-              <div class="inner-white-box">Text</div>
+            <div class="crystal-text-squircle" role="button" tabindex="0">
+              <div class="crystal-text-well">Text</div>
             </div>
           </div>
 
-          <!-- ROW 3: Select ⌵ | [✓] [+] | 3D Glass Toggle Switch -->
+          <!-- ROW 3: Select ⌄ | [✓] [+] | 3D Blue Toggle Switch -->
           <div class="board-row-3-light">
-            <div class="glass-select-capsule" role="button" tabindex="0">
-              <div class="inner-select-tray">
+            <button type="button" class="crystal-select-shell">
+              <span class="crystal-select-well">
                 <span>Select</span>
-                <span style="font-size: 13px; color: #64748b;">⌵</span>
-              </div>
+                <svg class="chevron-svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+
+            <div class="crystal-check-pill">
+              <button
+                type="button"
+                class="mint-checkbox checked"
+                role="checkbox"
+                aria-checked="true"
+                aria-label="Toggle completed state"
+                onclick="toggleCheckbox(this)"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="5 12.5 10 17.5 19 7.5"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="crystal-plus-btn" aria-label="Add item">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
             </div>
 
-            <div class="glass-check-tile">
-              <div class="check-square">✓</div>
-              <span class="plus-icon">+</span>
-            </div>
-
-            <div class="glass-switch-capsule" role="checkbox" aria-checked="true" tabindex="0" onclick="this.classList.toggle('off');">
-              <div class="inner-switch-well">
-                <div class="switch-ball"></div>
-              </div>
-            </div>
+            <button
+              type="button"
+              class="crystal-switch-shell on"
+              role="switch"
+              aria-checked="true"
+              aria-label="Blue liquid glass toggle"
+              onclick="toggleSwitch(this)"
+            >
+              <span class="crystal-switch-track">
+                <span class="crystal-switch-thumb"></span>
+              </span>
+            </button>
           </div>
 
-          <!-- ROW 4: Tabs Glass Panel + Card Glass Panel -->
+          <!-- ROW 4: Tabs Crystal Card + Card Crystal Panel -->
           <div class="board-row-4-light">
-            <div class="glass-card-panel">
+            <div class="crystal-panel panel-tabs">
               <div class="panel-header">
                 <span class="panel-title">Tabs</span>
-                <span class="panel-close">✕</span>
+                <button type="button" class="panel-close-btn" aria-label="Close Tabs panel">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                  </svg>
+                </button>
               </div>
-              <div class="panel-dropdown-list">
-                <div class="panel-dropdown-item">
+              <div class="panel-menu-well">
+                <button type="button" class="panel-menu-row">
                   <span>Invite member</span>
-                  <span style="font-size: 12px; color: #64748b;">⌵</span>
-                </div>
-                <div class="panel-dropdown-item">
+                  <svg class="chevron-svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <button type="button" class="panel-menu-row">
                   <span>Upgrade plan</span>
-                  <span style="font-size: 12px; color: #64748b;">⌵</span>
-                </div>
+                  <svg class="chevron-svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
               </div>
             </div>
 
-            <div class="glass-card-panel">
+            <div class="crystal-panel panel-card">
               <div class="panel-header">
                 <span class="panel-title">Card</span>
-                <span class="panel-close">✕</span>
+                <button type="button" class="panel-close-btn" aria-label="Close Card panel">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                  </svg>
+                </button>
               </div>
-              <div class="panel-toast-box">
-                Toarst, modal
+              <div class="panel-toast-well">
+                Toast, modal
               </div>
             </div>
           </div>
         </div>
 
         <!-- ============================================================== -->
-        <!-- DARK MODE VIEW (EXACT MATCH FOR IMAGE 1)                       -->
+        <!-- SMOKED NEON VIEW (EXACT MATCH FOR IMAGE 1)                     -->
         <!-- ============================================================== -->
-        <div id="dark-view" class="dark-mode-view" style="display: none;">
+        <div id="dark-view" class="dark-mode-view" hidden>
           <!-- ROW 1 DARK: Start project | Secondary -->
           <div class="board-row-1-dark">
-            <div class="glass-capsule capsule-coral" role="button" tabindex="0">
-              <span class="inner-coral-pill" style="background: linear-gradient(180deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); padding-inline: 42px;">
-                Start project
-              </span>
-            </div>
+            <button type="button" class="molded-pill pill-start-project">
+              <span>Start project</span>
+            </button>
 
-            <div class="glass-capsule capsule-secondary" role="button" tabindex="0">
-              <span class="inner-secondary-pill">Secondary</span>
-            </div>
+            <button type="button" class="molded-pill pill-secondary">
+              <span>Secondary</span>
+            </button>
           </div>
 
-          <!-- ROW 2 DARK: Star/Flower Icon + Dark Search Capsule -->
+          <!-- ROW 2 DARK: Cyan Flower Squircle + Smoked Search Block -->
           <div class="board-row-2-dark">
-            <div class="glass-flower-squircle" title="Cyan Neon Badge">
-              <div class="flower-icon-inner">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0-2.83 2H5a3 3 0 0 0-3 3 3 3 0 0 0 3 3h1.17A3 3 0 0 0 9 16v1a3 3 0 0 0 3 3 3 3 0 0 0 3-3v-1a3 3 0 0 0 2.83-2H19a3 3 0 0 0 3-3 3 3 0 0 0-3-3h-1.17A3 3 0 0 0 15 6V5a3 3 0 0 0-3-3z"></path>
+            <button type="button" class="smoked-squircle squircle-flower" aria-label="Cyan Neon Badge">
+              <span class="smoked-core-disc">
+                <svg class="flower-svg" viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M32 10c3.6 0 5.6 3.7 8.8 5.4 3.2 1.7 7.4 1.2 9.2 4.3 1.8 3.1-.3 6.7-.3 10.3s2.1 7.2.3 10.3c-1.8 3.1-6 2.6-9.2 4.3-3.2 1.7-5.2 5.4-8.8 5.4s-5.6-3.7-8.8-5.4c-3.2-1.7-7.4-1.2-9.2-4.3-1.8-3.1.3-6.7.3-10.3s-2.1-7.2-.3-10.3c1.8-3.1 6-2.6 9.2-4.3C26.4 13.7 28.4 10 32 10z"></path>
                 </svg>
-              </div>
-            </div>
+              </span>
+            </button>
 
-            <div class="glass-search-dark-outer" role="search">
-              <span class="dark-search-label">Text</span>
-              <div class="dark-search-pill-tray">
+            <div class="smoked-search-block" role="search">
+              <span class="smoked-block-label">Text</span>
+              <div class="smoked-search-pill">
                 <input type="text" placeholder="Search suggestions" aria-label="Search suggestions">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                  <line x1="15.5" y1="15.5" x2="21" y2="21"></line>
                 </svg>
               </div>
             </div>
           </div>
 
-          <!-- ROW 3 DARK: Two Neon Clock Badges + Purple Switch -->
+          <!-- ROW 3 DARK: Two Neon Checkmark Badges + Smoked Purple Switch -->
           <div class="board-row-3-dark">
-            <!-- Clock 1: Cyan-Pink Neon Ring with Checkmark -->
-            <div class="glass-neon-squircle" title="Cyan-Pink Neon Clock">
-              <div class="neon-clock-well neon-ring-cyan-pink">
-                <div class="neon-ring"></div>
-                <svg viewBox="0 0 24 24">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+            <!-- Badge 1: Cyan-Pink Neon Ring with Mint Checkmark -->
+            <button type="button" class="smoked-squircle squircle-neon-1" aria-label="Cyan-Pink Status Ring">
+              <span class="smoked-core-disc">
+                <span class="neon-ring ring-cyan-pink"></span>
+                <svg class="neon-check check-mint" viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="5.5 12.5 10 17 18.5 8"></polyline>
                 </svg>
-              </div>
-            </div>
+              </span>
+            </button>
 
-            <!-- Clock 2: Rainbow Neon Ring -->
-            <div class="glass-neon-squircle" title="Rainbow Neon Clock">
-              <div class="neon-clock-well neon-ring-rainbow">
-                <div class="neon-ring"></div>
-                <svg viewBox="0 0 24 24">
-                  <polyline points="12 6 12 12 15 15"></polyline>
+            <!-- Badge 2: Rainbow Neon Ring with Pink-White Checkmark -->
+            <button type="button" class="smoked-squircle squircle-neon-2" aria-label="Prismatic Status Ring">
+              <span class="smoked-core-disc">
+                <span class="neon-ring ring-rainbow"></span>
+                <svg class="neon-check check-blush" viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="5.5 12.5 10 17 18.5 8"></polyline>
                 </svg>
-              </div>
-            </div>
+              </span>
+            </button>
 
-            <!-- Dark Purple Toggle Switch -->
-            <div class="glass-switch-purple" id="dark-purple-switch" role="checkbox" aria-checked="false" tabindex="0" onclick="this.classList.toggle('on');">
-              <div class="inner-purple-well">
-                <div class="switch-ball"></div>
-              </div>
-            </div>
+            <!-- Smoked Purple Toggle Switch -->
+            <button
+              type="button"
+              id="dark-purple-switch"
+              class="smoked-switch-shell"
+              role="switch"
+              aria-checked="false"
+              aria-label="Smoked glass toggle"
+              onclick="toggleSwitch(this)"
+            >
+              <span class="smoked-switch-track">
+                <span class="smoked-switch-thumb"></span>
+              </span>
+            </button>
           </div>
 
-          <!-- ROW 4 DARK: Dark Smoked Glass Card -->
+          <!-- ROW 4 DARK: Obsidian Matte/Satin Card -->
           <div class="board-row-4-dark">
-            <div class="dark-smoked-panel">
-              <div class="panel-top">
-                <span class="panel-title">Tabs</span>
-                <span class="panel-sub-label">Card</span>
+            <div class="obsidian-card-panel">
+              <div class="obsidian-top">
+                <span class="obsidian-title">Tabs</span>
+                <span class="obsidian-sub-label">Card</span>
               </div>
-              <div class="find-files-text">Find files...</div>
-              <ul class="dark-panel-items">
+              <div class="obsidian-find-files">Find files...</div>
+              <ul class="obsidian-panel-items">
                 <li>
-                  <span class="dot-cyan"></span>
+                  <span class="obsidian-badge-dot" aria-hidden="true">
+                    <span class="dot-cyan"></span>
+                  </span>
                   <span>Add collaborator</span>
                 </li>
                 <li>
-                  <span class="circle-outline"></span>
+                  <span class="obsidian-badge-ring" aria-hidden="true"></span>
                   <span>Pro plan</span>
                 </li>
               </ul>
@@ -334,7 +381,7 @@
         </div>
       </div>
 
-      <!-- Mode Switcher Logic -->
+      <!-- Mode Switcher & Interactive Controls Logic -->
       <script>
         function setBoardMode(mode) {
           const lightView = document.getElementById('light-view');
@@ -343,18 +390,32 @@
           const btnDark = document.getElementById('btn-mode-dark');
 
           if (mode === 'dark') {
-            lightView.style.display = 'none';
-            darkView.style.display = 'flex';
+            lightView.hidden = true;
+            darkView.hidden = false;
             btnDark.classList.add('active');
+            btnDark.setAttribute('aria-checked', 'true');
             btnLight.classList.remove('active');
+            btnLight.setAttribute('aria-checked', 'false');
             document.body.dataset.theme = 'dark';
           } else {
-            lightView.style.display = 'flex';
-            darkView.style.display = 'none';
+            lightView.hidden = false;
+            darkView.hidden = true;
             btnLight.classList.add('active');
+            btnLight.setAttribute('aria-checked', 'true');
             btnDark.classList.remove('active');
+            btnDark.setAttribute('aria-checked', 'false');
             document.body.dataset.theme = 'light';
           }
+        }
+
+        function toggleSwitch(el) {
+          const isOn = el.classList.toggle('on');
+          el.setAttribute('aria-checked', String(isOn));
+        }
+
+        function toggleCheckbox(el) {
+          const isChecked = el.classList.toggle('checked');
+          el.setAttribute('aria-checked', String(isChecked));
         }
       </script>
     </section>
@@ -367,17 +428,16 @@
         <span class="section-tag">Pillar 1: Technical &amp; On-Page SEO</span>
         <h2 id="seo-heading" class="section-title">Dominating Search Engine Indexing &amp; Ranking</h2>
         <p class="section-desc">
-          Modern SEO is not keyword stuffing—it is technical hygiene, semantic clarity, 
+          Modern SEO is not keyword stuffing—it is technical hygiene, semantic clarity,
           structured entity mapping, and high-speed delivery.
         </p>
       </header>
 
       <div class="grid-cards">
-        <!-- Article 1: Metadata & Crawlability -->
         <article class="glass-knowledge-card">
           <h3 class="card-title">1. Metadata &amp; Crawlability</h3>
           <p class="card-summary">
-            Directing web crawlers via precise <code>&lt;meta name="robots"&gt;</code>, canonical links 
+            Directing web crawlers via precise <code>&lt;meta name="robots"&gt;</code>, canonical links
             to prevent duplicate content penalties, and optimized <code>&lt;title&gt;</code> / description tags.
           </p>
           <ul class="tag-list">
@@ -387,11 +447,10 @@
           </ul>
         </article>
 
-        <!-- Article 2: Structured Data (Schema.org) -->
         <article class="glass-knowledge-card">
           <h3 class="card-title">2. JSON-LD Structured Data</h3>
           <p class="card-summary">
-            Embedding Linked Data schemas (<code>WebSite</code>, <code>ProfilePage</code>, <code>BreadcrumbList</code>) 
+            Embedding Linked Data schemas (<code>WebSite</code>, <code>ProfilePage</code>, <code>BreadcrumbList</code>)
             enabling Google Knowledge Graph comprehension and rich SERP snippets with zero visual overhead.
           </p>
           <ul class="tag-list">
@@ -401,11 +460,10 @@
           </ul>
         </article>
 
-        <!-- Article 3: Core Web Vitals & Speed -->
         <article class="glass-knowledge-card">
           <h3 class="card-title">3. Core Web Vitals</h3>
           <p class="card-summary">
-            Google ranks fast pages. By maintaining <strong>Largest Contentful Paint (LCP) &lt; 2.5s</strong>, 
+            Google ranks fast pages. By maintaining <strong>Largest Contentful Paint (LCP) &lt; 2.5s</strong>,
             <strong>Cumulative Layout Shift (CLS) = 0</strong>, and minimal DOM depth, organic performance is maximized.
           </p>
           <ul class="tag-list">
@@ -415,11 +473,10 @@
           </ul>
         </article>
 
-        <!-- Article 4: Semantic Document Outline -->
         <article class="glass-knowledge-card">
-          <h3 class="card-title">4. Heading Architecture</h3>
+          <h3 class="card-title">4. Semantic Document Outline</h3>
           <p class="card-summary">
-            Strict heading hierarchy: Exactly one <code>&lt;h1&gt;</code> per document, followed by structured 
+            Strict heading hierarchy: Exactly one <code>&lt;h1&gt;</code> per document, followed by structured
             <code>&lt;h2&gt;</code> and <code>&lt;h3&gt;</code> levels. Screen readers and search indexers navigate this outline.
           </p>
           <ul class="tag-list">
@@ -439,12 +496,11 @@
         <span class="section-tag">Pillar 2: Semantic HTML5 Mastery</span>
         <h2 id="html-heading" class="section-title">Replacing "Div Soup" with Meaningful Elements</h2>
         <p class="section-desc">
-          HTML is not just visual layout—it is meaning. A semantic tag tells browsers, search crawlers, 
+          HTML is not just visual layout—it is meaning. A semantic tag tells browsers, search crawlers,
           and screen readers what the content represents.
         </p>
       </header>
 
-      <!-- SEMANTIC COMPARISON TABLE IN LIQUID GLASS -->
       <div class="glass-table-wrapper">
         <table class="semantic-table">
           <caption class="sr-only">Comparison of Legacy Non-Semantic Markup versus Modern Semantic HTML5</caption>
@@ -506,7 +562,7 @@
         <span class="section-tag">Pillar 3: Modern CSS Standards</span>
         <h2 id="css-heading" class="section-title">CSS3+ Specs That Eliminate Preprocessors</h2>
         <p class="section-desc">
-          Modern CSS has evolved past floats and Sass workarounds. Today, native CSS provides 
+          Modern CSS has evolved past floats and Sass workarounds. Today, native CSS provides
           design tokens, nesting, grid systems, fluid typography, and container-level responsiveness.
         </p>
       </header>
@@ -515,7 +571,7 @@
         <article class="glass-knowledge-card">
           <h3 class="card-title">1. Custom Properties (:root)</h3>
           <p class="card-summary">
-            CSS variables cascade through the DOM at runtime. Allows dark mode, high-contrast themes, 
+            CSS variables cascade through the DOM at runtime. Allows dark mode, high-contrast themes,
             and dynamic brand updates without recompiling stylesheets.
           </p>
           <ul class="tag-list">
@@ -528,7 +584,7 @@
         <article class="glass-knowledge-card">
           <h3 class="card-title">2. Grid &amp; Modern Flexbox</h3>
           <p class="card-summary">
-            Using <code>repeat(auto-fit, minmax(320px, 1fr))</code> for intrinsic 2D grids, and Flexbox with 
+            Using <code>repeat(auto-fit, minmax(320px, 1fr))</code> for intrinsic 2D grids, and Flexbox with
             modern <code>gap</code> properties for 1D alignments without margin hacks.
           </p>
           <ul class="tag-list">
@@ -541,7 +597,7 @@
         <article class="glass-knowledge-card">
           <h3 class="card-title">3. Native CSS Nesting</h3>
           <p class="card-summary">
-            Modern browsers natively support nesting selectors with <code>&amp;</code>. 
+            Modern browsers natively support nesting selectors with <code>&amp;</code>.
             No build step or Sass preprocessor required to write modular, scoped CSS.
           </p>
           <ul class="tag-list">
@@ -554,7 +610,7 @@
         <article class="glass-knowledge-card">
           <h3 class="card-title">4. Fluid Typography</h3>
           <p class="card-summary">
-            <code>clamp(min, preferred, max)</code> smoothly interpolates font sizes between viewport widths, 
+            <code>clamp(min, preferred, max)</code> smoothly interpolates font sizes between viewport widths,
             replacing dozens of rigid <code>@media</code> breakpoints.
           </p>
           <ul class="tag-list">
@@ -567,7 +623,7 @@
         <article class="glass-knowledge-card">
           <h3 class="card-title">5. :has(), :is(), :focus-visible</h3>
           <p class="card-summary">
-            The parent selector <code>:has()</code> brings conditional styling based on descendants. 
+            The parent selector <code>:has()</code> brings conditional styling based on descendants.
             <code>:is()</code> simplifies compound selectors, and <code>:focus-visible</code> guarantees keyboard a11y.
           </p>
           <ul class="tag-list">
@@ -580,7 +636,7 @@
         <article class="glass-knowledge-card">
           <h3 class="card-title">6. Acrylic Liquid Glass Optics</h3>
           <p class="card-summary">
-            Leveraging <code>backdrop-filter</code>, prismatic chromatic aberration caustics, 
+            Leveraging <code>backdrop-filter</code>, prismatic chromatic aberration caustics,
             specular gradient highlights, and multi-layered box shadows.
           </p>
           <ul class="tag-list">
@@ -593,7 +649,7 @@
     </section>
 
     <!-- ==================================================================== -->
-    <!-- SHOWCASE: GLOWING RIM-LIGHT ARTWORK (FROM IMAGE 3)                   -->
+    <!-- SHOWCASE: GLOWING RIM-LIGHT ARTWORK                                  -->
     <!-- ==================================================================== -->
     <section id="artwork" class="container" aria-labelledby="artwork-heading">
       <div class="artwork-glass-card">
@@ -605,17 +661,17 @@
         </figure>
 
         <div class="artwork-details">
-          <span style="font-family: var(--font-mono); font-size: var(--font-size-xs); color: #fbbf24; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-bottom: var(--space-2);">
-            Featured Visual Asset • From Uploaded Image 3
+          <span class="artwork-eyebrow">
+            Featured Visual Asset • Rim-Light Optics
           </span>
           <h3 id="artwork-heading">Luminous Rim-Lighting &amp; Responsive Media</h3>
           <p>
-            Demonstrating how modern HTML5 and CSS pair semantic media embedding with rich visual effects. 
-            Using <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>, the browser binds descriptive 
+            Demonstrating how modern HTML5 and CSS pair semantic media embedding with rich visual effects.
+            Using <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>, the browser binds descriptive
             metadata for screen readers and SEO indexers.
           </p>
           <p>
-            The luminous warm amber edge glow mirrors the optic rim-light physics in our liquid glass 
+            The luminous warm amber edge glow mirrors the optic rim-light physics in our liquid glass
             prismatic dispersion tokens.
           </p>
         </div>
@@ -630,7 +686,7 @@
         <span class="section-tag">Pillar 4: Interactive Architecture Lab</span>
         <h2 id="lab-heading" class="section-title">Deep-Dive Code Blueprints</h2>
         <p class="section-desc">
-          Click any liquid glass accordion item below to inspect complete code snippets demonstrating how each standard works. 
+          Click any liquid glass accordion item below to inspect complete code snippets demonstrating how each standard works.
           <em>(Notice: Built with native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>—zero JS!)</em>
         </p>
       </header>
@@ -669,22 +725,22 @@
         </details>
 
         <details>
-          <summary>Liquid Glass CSS Formula: Double-Capsule Optics</summary>
+          <summary>Liquid Glass CSS Formula: 3D Molded Acrylic &amp; Floor Caustics</summary>
           <div class="accordion-content">
             <p>
-              The complete CSS formula behind thick acrylic liquid glass with double-capsule framing:
+              The CSS optics behind thick 3D molded glass with internal bottom-bevel refraction and floor caustics:
             </p>
-            <pre><code>.glass-capsule {
-  padding: 6px;
-  border-radius: 9999px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.2) 100%);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1.5px solid rgba(255, 255, 255, 0.95);
+            <pre><code>.molded-lozenge {
+  position: relative;
+  border-radius: 36px;
+  border: 1.5px solid rgba(255, 255, 255, 0.72);
+  background: linear-gradient(172deg, rgba(244, 114, 130, 0.78) 0%, rgba(234, 88, 60, 0.88) 55%, rgba(245, 130, 56, 0.82) 100%);
   box-shadow:
-    inset 0 2.5px 3px rgba(255, 255, 255, 1),
-    inset 0 -2.5px 3px rgba(255, 255, 255, 0.75),
-    0 16px 28px -4px rgba(15, 23, 42, 0.12),
-    0 18px 30px -4px rgba(245, 158, 11, 0.38);
+    inset 0 3px 3px rgba(255, 255, 255, 0.85),
+    inset 0 -9px 10px -4px rgba(154, 52, 18, 0.35),
+    inset 0 -3px 2px rgba(255, 237, 213, 0.9),
+    0 18px 28px -6px rgba(249, 115, 22, 0.45),
+    8px 14px 22px -6px rgba(15, 23, 42, 0.16);
 }</code></pre>
           </div>
         </details>
@@ -699,7 +755,7 @@
         <span class="section-tag">Pillar 5: Semantic Forms &amp; Access</span>
         <h2 id="contact-heading" class="section-title">Accessible Form Engineering</h2>
         <p class="section-desc">
-          Form accessibility (A11y) is critical: every input must possess an associated <code>&lt;label for="..."&gt;</code>, 
+          Form accessibility (A11y) is critical: every input must possess an associated <code>&lt;label for="..."&gt;</code>,
           grouped logically inside a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code>.
         </p>
       </header>
@@ -709,12 +765,12 @@
           <legend>Web Standards Contact &amp; Inquiry</legend>
 
           <div class="form-group">
-            <label for="user-name">Your Full Name <span aria-hidden="true" style="color: #ef4444;">*</span></label>
+            <label for="user-name">Your Full Name <span aria-hidden="true" class="req-star">*</span></label>
             <input type="text" id="user-name" name="name" required placeholder="e.g. Ada Lovelace" autocomplete="name">
           </div>
 
           <div class="form-group">
-            <label for="user-email">Email Address <span aria-hidden="true" style="color: #ef4444;">*</span></label>
+            <label for="user-email">Email Address <span aria-hidden="true" class="req-star">*</span></label>
             <input type="email" id="user-email" name="email" required placeholder="name@domain.com" autocomplete="email">
           </div>
 
@@ -733,12 +789,10 @@
             <textarea id="user-message" name="message" rows="4" placeholder="Share your inquiry or project requirements..."></textarea>
           </div>
 
-          <div style="margin-top: var(--space-6);">
-            <div class="glass-capsule capsule-coral" style="width: 100%; display: flex;">
-              <button type="submit" class="inner-coral-pill" style="width: 100%; border: none; cursor: pointer;">
-                Submit Semantic Form →
-              </button>
-            </div>
+          <div class="form-submit-row">
+            <button type="submit" class="molded-pill pill-start-project form-submit-btn">
+              <span>Submit Semantic Form →</span>
+            </button>
           </div>
         </fieldset>
       </form>
@@ -753,11 +807,11 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="brand" style="margin-bottom: var(--space-4);">
-            <span style="font-size: 20px;">💎</span>
-            <span>liquid <span style="color: #0284c7;">glass</span></span>
+          <div class="brand footer-brand">
+            <span class="brand-gem" aria-hidden="true">💎</span>
+            <span>liquid <span class="brand-accent">glass</span></span>
           </div>
-          <p style="color: var(--text-secondary); font-size: var(--font-size-sm); margin-bottom: var(--space-4);">
+          <p class="footer-desc">
             Dedicated to modern web engineering: Liquid Glass Aesthetics, Search Engine Optimization, Semantic HTML5, and Cutting-Edge CSS.
           </p>
         </div>
@@ -779,7 +833,7 @@
           <address>
             <p><strong>Frontend &amp; SEO Architect</strong></p>
             <p>Specializing in HTML5, CSS3+, and Web Core Standards</p>
-            <p style="margin-top: var(--space-2);">Email: <a href="mailto:architect@webstandards.dev">architect@webstandards.dev</a></p>
+            <p class="footer-email">Email: <a href="mailto:architect@webstandards.dev">architect@webstandards.dev</a></p>
           </address>
         </div>
       </div>
@@ -789,7 +843,7 @@
           &copy; <time datetime="2026">2026</time> liquid glass web standards. Built with 100% semantic HTML5 and modern CSS.
         </p>
         <p>
-          <a href="#main-content" style="color: #0284c7; text-decoration: none; font-weight: 600;">↑ Back to top</a>
+          <a href="#main-content" class="back-to-top">↑ Back to top</a>
         </p>
       </div>
     </div>
